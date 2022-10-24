@@ -5,6 +5,8 @@ import Screenshot_1 from 'assets/images/screenshot1.png'
 import Screenshot_2 from 'assets/images/screenshot2.png'
 import Screenshot_3 from 'assets/images/screenshot3.png'
 import Screenshot_4 from 'assets/images/screenshot4.png'
+import AppStore from 'assets/images/app-store.png'
+import PlayStore from 'assets/images/play-store.png'
 import Logo from 'assets/images/logo.png'
 
 export default function LoginView() {
@@ -13,7 +15,7 @@ export default function LoginView() {
     const enable = username && password
 
     return (
-        <div className="h-full w-full flex flex-wrap justify-center items-center overflow-auto">
+        <div className="h-full w-full flex flex-wrap justify-center items-center overflow-auto m-[0_0_0_-24px]">
             <div className="hidden md:block relative bg-phone-wrapper bg-no-repeat bg-[length:468.32px_634.15px] w-[468.32px] h-[634.15px]">
                 <div className="absolute w-[250px] h-[538.84px] top-[27px] right-[61px]">
                     <img src={ Screenshot_1 } className="w-full h-full absolute top-0 left-0 transition-opacity" />
@@ -22,9 +24,9 @@ export default function LoginView() {
                     { /* <img src={ Screenshot_4 } className="w-full h-full absolute top-0 left-0 transition-opacity opacity-0" /> */ }
                 </div>
             </div>
-            <div className="flex flex-col">
-                <div className="flex flex-col justify-center items-center bg-white border px-[40px] w-[350px] pt-8 pb-2 mb-[10px]">
-                    <a href="#" className="flex justify-center mb-8">
+            <div className="flex flex-col gap-y-[10px]">
+                <div className="flex flex-col justify-center items-center bg-white border px-[40px] w-[350px] pt-8 pb-2">
+                    <a href="#" className="flex justify-center m-[15px_0_40px_0]">
                         <img src={ Logo } />
                     </a>
                     <form className="flex flex-col justify-center items-center gap-y-1.5 w-full">
@@ -41,11 +43,18 @@ export default function LoginView() {
                         <AiFillFacebook size="21px" color="#385185" />
                         <span className="text-sm text-[#385185] font-semibold pointer-events-none">Log in with Facebook</span>
                     </a>
-                    <a className="text-center p-[12px_0_10spx_0] text-xs text-[#00376b] cursor-pointer">Forgot password?</a>
+                    <a className="text-center p-[12px_0_10px_0] text-xs text-[#00376b] cursor-pointer">Forgot password?</a>
                 </div>
                 <div className="flex flex-col justify-center items-center bg-white border w-[350px] p-[15px]">
                     <div>
                         <span className="text-[#262626] text-sm">Dont have an account? <a className="text-[#0095f6] font-semibold cursor-pointer">Sign up</a></span>
+                    </div>
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                    <p className="text-sm m-[10px_20px_20px_25px] text-[#262626">Get the app.</p>
+                    <div className="flex gap-x-[8px]">
+                        <img src={AppStore} className="w-[136px] cursor-pointer" />
+                        <img src={PlayStore} className="w-[136px] cursor-pointer" />
                     </div>
                 </div>
             </div>
